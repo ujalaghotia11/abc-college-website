@@ -1,32 +1,41 @@
 
-  /* mobile menu */
-  const menuToggle = document.getElementById('menuToggle');
-  const mainNav = document.getElementById('mainNav');
-  const overlay = document.getElementById('overlay');
+/* mobile menu */
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+const overlay = document.getElementById('overlay');
 
-  function closeMenu(){
-    mainNav.classList.remove('open');
-    menuToggle.classList.remove('open');
-    overlay.classList.remove('show');
-    document.querySelectorAll('.has-mega.open').forEach(el => el.classList.remove('open'));
-  }
+function closeMenu(){
+  mainNav.classList.remove('open');
+  menuToggle.classList.remove('open');
+  overlay.classList.remove('show');
+  document.body.classList.remove('menu-open');
+  document.querySelectorAll('.has-mega.open').forEach(el => el.classList.remove('open'));
+}
 
-  menuToggle.addEventListener('click', () => {
-    const isOpen = mainNav.classList.toggle('open');
-    menuToggle.classList.toggle('open', isOpen);
-    overlay.classList.toggle('show', isOpen);
-  });
-  overlay.addEventListener('click', closeMenu);
+menuToggle.addEventListener('click', () => {
+  const isOpen = mainNav.classList.toggle('open');
+  menuToggle.classList.toggle('open', isOpen);
+  overlay.classList.toggle('show', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+});
+overlay.addEventListener('click', closeMenu);
 
-  document.querySelectorAll('.has-mega').forEach(item => {
-    const link = item.querySelector('a.nav-link');
-    link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 1020) { e.preventDefault(); item.classList.toggle('open'); }
-    });
+document.querySelectorAll('.has-mega').forEach(item => {
+  const link = item.querySelector('a.nav-link');
+  link.addEventListener('click', (e) => {
+    if (window.innerWidth <= 1020) { e.preventDefault(); item.classList.toggle('open'); }
   });
-  document.querySelectorAll('.main-nav > a.nav-link').forEach(link=>{
-    link.addEventListener('click', () => { if (window.innerWidth <= 1020) closeMenu(); });
-  });
+});
+
+/* normal links + dropdown ke andar ke links click par menu band ho */
+document.querySelectorAll('.main-nav > a.nav-link, .mega a, .nav-actions a').forEach(link => {
+  link.addEventListener('click', () => { if (window.innerWidth <= 1020) closeMenu(); });
+});
+
+/* screen badi ho jaye to menu reset */
+window.addEventListener('resize', () => { if (window.innerWidth > 1020) closeMenu(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
 
   /* ---- hero illustration carousel ---- */
   const slides = document.querySelectorAll('.hero-slide');

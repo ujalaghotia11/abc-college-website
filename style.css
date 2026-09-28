@@ -11,7 +11,15 @@
     --gold-pale:#f1e6c9;
     --stone:#6b6459;
     --line:#e6dfd0;
+    color-scheme: light only;
   }
+  html, body{
+  background:#ffffff;
+  color-scheme: light only;
+}
+input, select, textarea, button{
+  color-scheme: light only;
+}
 
   *{ box-sizing:border-box; }
   body{
@@ -1079,3 +1087,89 @@
     .apply-form{ padding: 1.6rem; }
     .apply-form .form-row{ grid-template-columns:1fr; }
   }
+/* button hamesha menu ke upar rahe */
+.menu-toggle{
+  position:relative;
+  z-index:120;
+}
+
+@media (max-width: 1020px){
+  nav.main-nav{
+    height:100vh;
+    height:100dvh;          /* mobile browser fix */
+    z-index:110;
+    padding: 5.5rem 1.75rem 2rem;
+  }
+  .nav-actions{ flex-direction:column; align-items:stretch; gap:.8rem; margin-top:1.5rem; }
+  .nav-actions .btn-portal{ display:block; text-align:center; padding:.8rem 0; border:1px solid var(--line); }
+  .nav-actions .btn-apply{ margin-top:0; }
+
+  .mega-col a{ padding:.6rem 0; }
+  .overlay{ z-index:105; }
+}
+
+/* page scroll lock jab menu open ho */
+body.menu-open{ overflow:hidden; }
+
+/* horizontal scroll rokne ke liye */
+html, body{ overflow-x:hidden; }
+
+@media (max-width: 480px){
+  .hero-caption{ left:.75rem; right:.75rem; bottom:2.6rem; font-size:.85rem; }
+  .hero-dots{ left:.75rem; right:auto; bottom:1rem; }
+  .hero-text h1{ font-size:1.8rem; }
+  .hero-btn-primary, .hero-btn-ghost{ width:100%; text-align:center; }
+}
+/* ---- real photos ---- */
+.hero-slide,
+.gallery-item{ background: var(--cream-deep); }
+
+.hero-slide img,
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;      /* stretch nahi hogi, har screen par fit */
+  display:block;
+}
+.gallery-item img{ transition: transform .5s ease; }
+.gallery-item:hover img{ transform: scale(1.08); }
+
+/* caption/dots photo ke upar clearly dikhen */
+.hero-slide::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(19,42,76,0) 60%, rgba(19,42,76,0.35) 100%);
+  pointer-events:none;
+}
+/* ---- course card photos ---- */
+.course-card{ padding:0; overflow:hidden; }
+
+.course-card .course-thumb{
+  height:170px;
+  margin:0;
+  width:100%;
+  border-radius:0;
+  background: var(--cream-deep);
+}
+.course-card .course-thumb::before{ display:none; }
+
+.course-card .course-thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition: transform .5s ease;
+}
+.course-card:hover .course-thumb img{ transform: scale(1.07); }
+
+/* card ka text ab padding ke saath */
+.course-card .course-info{ padding:1.5rem 1.6rem 1.7rem; }
+
+/* Undergraduate / Postgraduate / Doctoral ka color strip */
+.course-card[data-cat="ug"]  .course-thumb{ border-bottom:3px solid var(--navy); }
+.course-card[data-cat="pg"]  .course-thumb{ border-bottom:3px solid var(--gold); }
+.course-card[data-cat="phd"] .course-thumb{ border-bottom:3px solid #7a3d3d; }
+
+@media (max-width:640px){
+  .course-card .course-thumb{ height:190px; }
+}

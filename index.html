@@ -7,7 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+<script src="script.js" defer></script>
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#ffffff">
 </head>
 <body>
 
@@ -166,30 +168,18 @@
       <div class="hero-slide-frame" id="heroFrame">
 
         <!-- Slide 1: Library -->
-        <div class="hero-slide active">
-          <svg viewBox="0 0 700 620" xmlns="http://www.w3.org/2000/svg">
-            <rect width="700" height="620" fill="#f1e6c9"/>
-            <circle cx="590" cy="90" r="120" fill="#e6d7ab" opacity="0.6"/>
-            <rect x="0" y="430" width="700" height="190" fill="#132a4c"/>
-            <g fill="#2a4468">
-              <rect x="60" y="270" width="90" height="160" />
-              <rect x="160" y="230" width="90" height="200" />
-              <rect x="260" y="290" width="90" height="140" />
-              <rect x="360" y="210" width="90" height="220" />
-              <rect x="460" y="260" width="90" height="170" />
-              <rect x="560" y="240" width="80" height="190" />
-            </g>
-            <g stroke="#f1e6c9" stroke-width="2" opacity="0.85">
-              <line x1="60" y1="300" x2="150" y2="300"/><line x1="60" y1="340" x2="150" y2="340"/><line x1="60" y1="380" x2="150" y2="380"/>
-              <line x1="160" y1="260" x2="250" y2="260"/><line x1="160" y1="300" x2="250" y2="300"/><line x1="160" y1="340" x2="250" y2="340"/><line x1="160" y1="380" x2="250" y2="380"/>
-              <line x1="360" y1="240" x2="450" y2="240"/><line x1="360" y1="280" x2="450" y2="280"/><line x1="360" y1="320" x2="450" y2="320"/><line x1="360" y1="360" x2="450" y2="360"/>
-              <line x1="460" y1="290" x2="550" y2="290"/><line x1="460" y1="330" x2="550" y2="330"/><line x1="460" y1="370" x2="550" y2="370"/>
-              <line x1="560" y1="270" x2="640" y2="270"/><line x1="560" y1="310" x2="640" y2="310"/><line x1="560" y1="350" x2="640" y2="350"/>
-            </g>
-            <path d="M270 480 C270 460 300 450 350 450 C400 450 430 460 430 480 V520 C400 505 370 512 350 522 C330 512 300 505 270 520 Z" fill="#f1e6c9"/>
-            <line x1="350" y1="452" x2="350" y2="522" stroke="#a9812f" stroke-width="2"/>
-          </svg>
-        </div>
+       <div class="hero-slide active">
+  <img src="/1.avif" alt="The Grand Reading Hall, University Library">
+</div>
+<div class="hero-slide">
+  <img src="/2.avif" alt="Founders' Building" loading="lazy">
+</div>
+<div class="hero-slide">
+  <img src="/3.avif" alt="Convocation Day" loading="lazy">
+</div>
+<div class="hero-slide">
+  <img src="/4.avif" alt="Research Centre" loading="lazy">
+</div>
 
         <!-- Slide 2: Historic building / columns -->
         <div class="hero-slide">
@@ -314,6 +304,7 @@
 </section>
 
 <!-- ================= COURSES SECTION ================= -->
+<!-- ================= COURSES SECTION ================= -->
 <section class="courses" id="courses">
   <div class="courses-inner">
     <div class="courses-head">
@@ -338,143 +329,157 @@
 
     <div class="course-grid" id="courseGrid">
 
+      <!-- 1. BCA -->
       <div class="course-card" data-cat="ug" data-name="bca bachelor of computer applications">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="14" rx="1.5"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg></div>
+        <div class="course-thumb"><img src="/10.avif" alt="Bachelor of Computer Applications" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · BCA</span>
-        <h3>Bachelor of Computer Applications</h3>
-        <p>Programming foundations, databases, web development, and software design.</p>
-        <div class="course-meta"><span>3 Years</span><a href="#bca">View Details →</a></div>
+          <h3>Bachelor of Computer Applications</h3>
+          <p>Programming foundations, databases, web development, and software design.</p>
+          <div class="course-meta"><span>3 Years</span><a href="#bca">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 2. MCA -->
       <div class="course-card" data-cat="pg" data-name="mca master of computer applications">
-        <div class="course-thumb thumb-pg"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
+        <div class="course-thumb"><img src="/11.avif" alt="Master of Computer Applications" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Postgraduate · MCA</span>
-        <h3>Master of Computer Applications</h3>
-        <p>Advanced software development, cloud systems, and data engineering.</p>
-        <div class="course-meta"><span>2 Years</span><a href="#mca">View Details →</a></div>
+          <h3>Master of Computer Applications</h3>
+          <p>Advanced software development, cloud systems, and data engineering.</p>
+          <div class="course-meta"><span>2 Years</span><a href="#mca">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 3. B.Tech CS -->
       <div class="course-card" data-cat="ug" data-name="b.tech computer science engineering btech cse">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="1"/><line x1="4" y1="9" x2="20" y2="9"/><line x1="9" y1="9" x2="9" y2="20"/></svg></div>
+        <div class="course-thumb"><img src="/12.avif" alt="B.Tech Computer Science" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · B.Tech</span>
-        <h3>B.Tech Computer Science</h3>
-        <p>Core programming, AI/ML, systems design, and software engineering practice.</p>
-        <div class="course-meta"><span>4 Years</span><a href="#cse">View Details →</a></div>
+          <h3>B.Tech Computer Science</h3>
+          <p>Core programming, AI/ML, systems design, and software engineering practice.</p>
+          <div class="course-meta"><span>4 Years</span><a href="#cse">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 4. M.Tech CS -->
       <div class="course-card" data-cat="pg" data-name="m.tech computer science mtech cse">
-        <div class="course-thumb thumb-pg"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M3 9l9-5 9 5"/><path d="M3 9v6"/></svg></div>
+        <div class="course-thumb"><img src="/4.avif" alt="M.Tech Computer Science" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Postgraduate · M.Tech</span>
-        <h3>M.Tech Computer Science</h3>
-        <p>Advanced algorithms, distributed systems, and specialization-led research.</p>
-        <div class="course-meta"><span>2 Years</span><a href="#mtech-cs">View Details →</a></div>
+          <h3>M.Tech Computer Science</h3>
+          <p>Advanced algorithms, distributed systems, and specialization-led research.</p>
+          <div class="course-meta"><span>2 Years</span><a href="#mtech-cs">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 5. Mechanical -->
       <div class="course-card" data-cat="ug" data-name="mechanical engineering btech">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21l9-16 9 16H3z"/><line x1="8" y1="21" x2="8" y2="13"/><line x1="16" y1="21" x2="16" y2="13"/></svg></div>
+        <div class="course-thumb"><img src="/6.avif" alt="Mechanical Engineering" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · B.Tech</span>
-        <h3>Mechanical Engineering</h3>
-        <p>Thermodynamics, robotics, manufacturing, and industrial design fundamentals.</p>
-        <div class="course-meta"><span>4 Years</span><a href="#mech">View Details →</a></div>
+          <h3>Mechanical Engineering</h3>
+          <p>Thermodynamics, robotics, manufacturing, and industrial design fundamentals.</p>
+          <div class="course-meta"><span>4 Years</span><a href="#mech">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 6. BBA -->
       <div class="course-card" data-cat="ug" data-name="business administration bba">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><line x1="12" y1="4" x2="12" y2="20"/><path d="M4 12a8 4 0 0016 0"/></svg></div>
+        <div class="course-thumb"><img src="/7.avif" alt="Business Administration" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · BBA</span>
-        <h3>Business Administration</h3>
-        <p>Management fundamentals, marketing, finance, and entrepreneurship training.</p>
-        <div class="course-meta"><span>3 Years</span><a href="#bba">View Details →</a></div>
+          <h3>Business Administration</h3>
+          <p>Management fundamentals, marketing, finance, and entrepreneurship training.</p>
+          <div class="course-meta"><span>3 Years</span><a href="#bba">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 7. Commerce -->
       <div class="course-card" data-cat="ug" data-name="commerce b.com bcom">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19V6a2 2 0 012-2h9l5 5v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M15 4v5h5"/></svg></div>
+        <div class="course-thumb"><img src="/2.avif" alt="Commerce" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · B.Com</span>
-        <h3>Commerce</h3>
-        <p>Accounting, taxation, economics, and financial analysis for future professionals.</p>
-        <div class="course-meta"><span>3 Years</span><a href="#bcom">View Details →</a></div>
+          <h3>Commerce</h3>
+          <p>Accounting, taxation, economics, and financial analysis for future professionals.</p>
+          <div class="course-meta"><span>3 Years</span><a href="#bcom">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 8. Liberal Arts -->
       <div class="course-card" data-cat="ug" data-name="liberal arts humanities b.a. ba">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4a4 4 0 100 8 4 4 0 000-8z"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <div class="course-thumb"><img src="/5.avif" alt="Liberal Arts and Humanities" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · B.A.</span>
-        <h3>Liberal Arts & Humanities</h3>
-        <p>Literature, history, psychology, and political science with flexible electives.</p>
-        <div class="course-meta"><span>3 Years</span><a href="#ba">View Details →</a></div>
+          <h3>Liberal Arts &amp; Humanities</h3>
+          <p>Literature, history, psychology, and political science with flexible electives.</p>
+          <div class="course-meta"><span>3 Years</span><a href="#ba">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 9. Life Sciences -->
       <div class="course-card" data-cat="ug" data-name="life sciences b.sc. bsc biology">
-        <div class="course-thumb thumb-ug"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <div class="course-thumb"><img src="/8.avif" alt="Life Sciences" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Undergraduate · B.Sc.</span>
-        <h3>Life Sciences</h3>
-        <p>Biology, biotechnology, and chemistry with hands-on laboratory research.</p>
-        <div class="course-meta"><span>3 Years</span><a href="#bsc">View Details →</a></div>
+          <h3>Life Sciences</h3>
+          <p>Biology, biotechnology, and chemistry with hands-on laboratory research.</p>
+          <div class="course-meta"><span>3 Years</span><a href="#bsc">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 10. MBA -->
       <div class="course-card" data-cat="pg" data-name="master of business administration mba">
-        <div class="course-thumb thumb-pg"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4h11l5 5v11H3z"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="14" y2="16"/></svg></div>
+        <div class="course-thumb"><img src="/9.avif" alt="Master of Business Administration" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Postgraduate · MBA</span>
-        <h3>Master of Business Administration</h3>
-        <p>Advanced strategy, leadership, and specialization tracks in finance & analytics.</p>
-        <div class="course-meta"><span>2 Years</span><a href="#mba">View Details →</a></div>
+          <h3>Master of Business Administration</h3>
+          <p>Advanced strategy, leadership, and specialization tracks in finance &amp; analytics.</p>
+          <div class="course-meta"><span>2 Years</span><a href="#mba">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 11. Data Science -->
       <div class="course-card" data-cat="pg" data-name="data science m.sc. msc">
-        <div class="course-thumb thumb-pg"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 6 .8-4.5 4.2 1.2 6-5.7-3-5.7 3 1.2-6L3 8.8 9 8z"/></svg></div>
+        <div class="course-thumb"><img src="/11.avif" alt="Data Science" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Postgraduate · M.Sc.</span>
-        <h3>Data Science</h3>
-        <p>Statistics, machine learning, and applied analytics for real-world datasets.</p>
-        <div class="course-meta"><span>2 Years</span><a href="#msc-ds">View Details →</a></div>
+          <h3>Data Science</h3>
+          <p>Statistics, machine learning, and applied analytics for real-world datasets.</p>
+          <div class="course-meta"><span>2 Years</span><a href="#msc-ds">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 12. PhD Engineering -->
       <div class="course-card" data-cat="phd" data-name="phd engineering technology">
-        <div class="course-thumb thumb-phd"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M3 9l9-5 9 5"/><path d="M3 9v6"/></svg></div>
+        <div class="course-thumb"><img src="/11.avif" alt="PhD Engineering and Technology" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Doctoral · Ph.D.</span>
-        <h3>Engineering & Technology</h3>
-        <p>Independent research across robotics, materials science, and AI systems.</p>
-        <div class="course-meta"><span>3–5 Years</span><a href="#phd-eng">View Details →</a></div>
+          <h3>Engineering &amp; Technology</h3>
+          <p>Independent research across robotics, materials science, and AI systems.</p>
+          <div class="course-meta"><span>3–5 Years</span><a href="#phd-eng">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 13. PhD Management -->
       <div class="course-card" data-cat="phd" data-name="phd management studies">
-        <div class="course-thumb thumb-phd"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+        <div class="course-thumb"><img src="/9.avif" alt="PhD Management Studies" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Doctoral · Ph.D.</span>
-        <h3>Management Studies</h3>
-        <p>Original research in organizational behavior, strategy, and economics.</p>
-        <div class="course-meta"><span>3–5 Years</span><a href="#phd-mgmt">View Details →</a></div>
+          <h3>Management Studies</h3>
+          <p>Original research in organizational behavior, strategy, and economics.</p>
+          <div class="course-meta"><span>3–5 Years</span><a href="#phd-mgmt">View Details →</a></div>
         </div>
       </div>
 
+      <!-- 14. PhD Humanities -->
       <div class="course-card" data-cat="phd" data-name="phd humanities social sciences">
-        <div class="course-thumb thumb-phd"><svg class="course-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+        <div class="course-thumb"><img src="/6.avif" alt="PhD Humanities and Social Sciences" loading="lazy"></div>
         <div class="course-info">
           <span class="course-level">Doctoral · Ph.D.</span>
-        <h3>Humanities & Social Sciences</h3>
-        <p>Advanced research in literature, sociology, and public policy.</p>
-        <div class="course-meta"><span>3–5 Years</span><a href="#phd-hss">View Details →</a></div>
+          <h3>Humanities &amp; Social Sciences</h3>
+          <p>Advanced research in literature, sociology, and public policy.</p>
+          <div class="course-meta"><span>3–5 Years</span><a href="#phd-hss">View Details →</a></div>
         </div>
       </div>
 
@@ -540,77 +545,30 @@
     </div>
 
     <div class="gallery-grid">
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#132a4c"/>
-          <rect y="210" width="400" height="90" fill="#0d1626"/>
-          <g fill="#2a4468"><rect x="40" y="120" width="55" height="90"/><rect x="105" y="90" width="55" height="120"/><rect x="170" y="130" width="55" height="80"/><rect x="235" y="70" width="55" height="140"/><rect x="300" y="110" width="55" height="100"/></g>
-          <circle cx="200" cy="55" r="14" fill="#cfa855"/>
-        </svg>
-        <div class="gallery-caption">Founders' Building</div>
-      </div>
-
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#f1e6c9"/>
-          <rect y="230" width="400" height="70" fill="#132a4c"/>
-          <g fill="#2a4468"><rect x="60" y="130" width="70" height="110"/><rect x="165" y="110" width="70" height="130"/><rect x="270" y="150" width="70" height="90"/></g>
-          <g stroke="#f1e6c9" stroke-width="2"><line x1="70" y1="155" x2="120" y2="155"/><line x1="70" y1="185" x2="120" y2="185"/><line x1="175" y1="140" x2="225" y2="140"/><line x1="175" y1="170" x2="225" y2="170"/><line x1="175" y1="200" x2="225" y2="200"/></g>
-        </svg>
-        <div class="gallery-caption">University Library</div>
-      </div>
-
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#2a4468"/>
-          <circle cx="330" cy="60" r="60" fill="#f1e6c9" opacity="0.15"/>
-          <g fill="#f1e6c9">
-            <circle cx="110" cy="180" r="22"/><rect x="90" y="205" width="40" height="60" rx="8"/>
-            <circle cx="200" cy="165" r="22"/><rect x="180" y="190" width="40" height="75" rx="8"/>
-            <circle cx="290" cy="180" r="22"/><rect x="270" y="205" width="40" height="60" rx="8"/>
-          </g>
-        </svg>
-        <div class="gallery-caption">Student Life on Campus</div>
-      </div>
-
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#f6efdb"/>
-          <rect x="30" y="40" width="340" height="220" rx="4" fill="#132a4c"/>
-          <rect x="50" y="60" width="300" height="150" rx="2" fill="#2a4468"/>
-          <g fill="#cfa855"><rect x="70" y="80" width="60" height="8"/><rect x="70" y="100" width="120" height="8"/><rect x="70" y="120" width="90" height="8"/><rect x="70" y="150" width="140" height="8"/><rect x="70" y="170" width="70" height="8"/></g>
-        </svg>
-        <div class="gallery-caption">Computer Science Lab</div>
-      </div>
-
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#5c2a2a"/>
-          <circle cx="200" cy="110" r="55" fill="#f1e6c9"/>
-          <path d="M200 55 a55 55 0 010 110" fill="#e0bd4f"/>
-          <rect x="185" y="160" width="30" height="90" fill="#f1e6c9"/>
-          <path d="M60 250 h280" stroke="#f1e6c9" stroke-width="3" opacity="0.5"/>
-        </svg>
-        <div class="gallery-caption">Convocation Day</div>
-      </div>
-
-      <div class="gallery-item">
-        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#132a4c"/>
-          <g fill="none" stroke="#f1e6c9" stroke-width="2">
-            <rect x="70" y="60" width="90" height="65" rx="3"/>
-            <rect x="240" y="60" width="90" height="65" rx="3"/>
-            <rect x="70" y="160" width="90" height="65" rx="3"/>
-            <rect x="240" y="160" width="90" height="65" rx="3"/>
-          </g>
-          <circle cx="115" cy="92" r="10" fill="#cfa855"/>
-          <circle cx="285" cy="92" r="10" fill="#cfa855"/>
-          <circle cx="115" cy="192" r="10" fill="#cfa855"/>
-          <circle cx="285" cy="192" r="10" fill="#cfa855"/>
-        </svg>
-        <div class="gallery-caption">Sports & Recreation Center</div>
-      </div>
-    </div>
+    <div class="gallery-item">
+  <img src="/5.avif" alt="Founders' Building" loading="lazy">
+  <div class="gallery-caption">Founders' Building</div>
+</div>
+<div class="gallery-item">
+  <img src="/6.avif" alt="University Library" loading="lazy">
+  <div class="gallery-caption">University Library</div>
+</div>
+<div class="gallery-item">
+  <img src="/7.avif" alt="Student Life on Campus" loading="lazy">
+  <div class="gallery-caption">Student Life on Campus</div>
+</div>
+<div class="gallery-item">
+  <img src="/8.avif" alt="Computer Science Lab" loading="lazy">
+  <div class="gallery-caption">Computer Science Lab</div>
+</div>
+<div class="gallery-item">
+  <img src="/9.avif" alt="Convocation Day" loading="lazy">
+  <div class="gallery-caption">Convocation Day</div>
+</div>
+<div class="gallery-item">
+  <img src="/1.avif" alt="Sports & Recreation Center" loading="lazy">
+  <div class="gallery-caption">Sports & Recreation Center</div>
+</div>
   </div>
 </section>
 
