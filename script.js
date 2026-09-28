@@ -38,40 +38,47 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(
 
 
   /* ---- hero illustration carousel ---- */
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.hero-dots button');
-  const captionEl = document.getElementById('heroCaption');
-  const captions = [
-    'The Grand Reading Hall, University Library',
-    'The Founders\' Building, Est. 1978',
-    'Convocation Day, Class of 2026',
-    'Centre for Global Research & Studies'
-  ];
-  let current = 0;
-  let timer;
+ /* ---- hero carousel (infinite loop, no black gap) ---- */
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dots button');
+const captionEl = document.getElementById('heroCaption');
+const captions = [
+  'The Grand Reading Hall, University Library',
+  'The Founders\' Building, Est. 1978',
+  'Convocation Day, Class of 2026',
+  'Centre for Global Research & Studies'
+];
+let current = 0;
+let timer;
 
-  function goTo(index){
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    captionEl.textContent = captions[current];
-    resetTimer();
-  }
+function goTo(index){
+  const prev = current;
+  current = (index + slides.length) % slides.length;   // last ke baad phir pehli
+  if (prev === current) return;
 
-  function next(){ goTo(current + 1); }
+  slides.forEach(s => s.classList.remove('active', 'prev'));
+  slides[prev].classList.add('prev');
+  slides[current].classList.add('active');
 
-  function resetTimer(){
-    clearInterval(timer);
-    timer = setInterval(next, 4500);
-  }
+  dots.forEach(d => d.classList.remove('active'));
+  dots[current].classList.add('active');
 
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
-  });
-
+  captionEl.textContent = captions[current];
   resetTimer();
+}
+
+function next(){ goTo(current + 1); }
+
+function resetTimer(){
+  clearInterval(timer);
+  timer = setInterval(next, 4500);
+}
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10)));
+});
+
+resetTimer();
 
   /* ---- animated count-up stats (runs once, when scrolled into view) ---- */
   function formatNumber(num, useComma){
